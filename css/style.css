@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;    
+}
+
+
+body{
+    background-color: #BBDEFB; 
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;     
+    font-size: 18px;
+}
+
+
+
+
+
+
+header {
+    
+    padding: 10px 0;
+}
+
+nav {
+    margin-bottom: 20px;
+    margin-right: 40px;  
+    text-align: right;
+    
+}
+
+#logo {
+    height: 100px;
+    display: left;           
+}
+
+nav ul{
+    list-style-type: none;    
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+li a {
+    font-size: 18px;
+}
+
+a{
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18PX;
+    font-weight: bold;
+    text-decoration: none;
+    color: #009688;
+
+}
+
+
+
+
+
+main {
+    position: relative;
+    padding: 20px;
+    margin-top: 20px;
+    
+}
+  
+section {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    padding: 20px;
+    
+}
+
+section + section {
+    border-top: 1px solid rgb(85, 81, 81);
+    margin-top: 20px;
+}
+  
+aside {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 50%;
+    text-align: center;
+}
+  
+#mockup {
+    max-width: 100%;
+    height: auto;
+}
+
+.mockupflat{
+    display: inline;
+    height: 450px;
+    padding: 20px;
+}
+
+h1{
+    font-size: 46px;
+    font-weight:900;
+    color: #1976D2;    
+}
+
+h2{
+    padding: 0 0 20px 0;
+}
+
+#behance{
+    font-size: 16px;
+    padding-left: 24px;
+}
+
+.registrate{
+    padding-top: 16px;
+    border-top: 2px solid slategray;
+    margin-top: 20px;
+}
+
+
+#iniciasesion { 
+    padding: 5px 5px 5px 5px;
+    border-style: 3px solid;
+    border-color: #1976D2 ;    
+}
+
+#Registrar{
+    padding: 5px 5px 5px 5px;
+    border-style: 3px solid;
+    border-color: #009688 ;
+}
+
+#Limpiar{
+    padding: 5px 5px 5px 5px;
+    border-style: 3px solid;
+    border-color:#b00020 ;
+}
+
+#Comentar{
+    padding: 5px 5px 5px 5px;
+    border-style: 3px solid;
+    border-color: #009688 ;
+}
+
+p{
+    padding: 5PX 5PX 5PX 5PX;
+}
+
+label {
+    padding: 5PX 5PX 5PX 5PX;
+}
+
+input{
+    margin: 5PX 5PX 5PX ;
+    border-color: rgb(128, 128, 128);
+    border-radius: 5px;
+}
+
+
+footer{
+    margin-top: 180px;
+    padding-left: 24px;
+    
+}
+
+.footertext{
+    text-align: right
+}
+
+
+.icons{
+    width: 24px;
+    height: 24px;
+    margin: 24px 8px 24px 8px;
+}

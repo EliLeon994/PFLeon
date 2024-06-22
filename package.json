@@ -1,0 +1,27 @@
+{
+  "name": "preentrega3leon",
+  "version": "1.0.0",
+  "description": "Este proyecto es mi pagina web de Regis una app movil.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliLeon994/PreEntrega3Leon.git"
+  },
+  "keywords": [
+    "Veterinario",
+    "Mascotas",
+    "Salud",
+    "Control",
+    "App",
+    "movil."
+  ],
+  "author": "Eliana Leon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EliLeon994/PreEntrega3Leon/issues"
+  },
+  "homepage": "https://github.com/EliLeon994/PreEntrega3Leon#readme"
+}

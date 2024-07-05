@@ -1,8 +1,8 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -10,12 +10,12 @@ body {
   font-family: "Roboto", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-weight: 700;
+  overflow-x: hidden;
 }
 
 header {
   padding: 10px 0;
 }
-
 header .navbar {
   margin-bottom: 20px;
   margin-right: 40px;
@@ -25,18 +25,15 @@ header .navbar {
   font-weight: 700;
   text-decoration: none;
 }
-
 header .navbar ul {
   list-style-type: none;
 }
-
 header .navbar ul li {
   list-style-type: none;
   text-decoration: none;
   display: inline-block;
   padding: 0 10px;
 }
-
 header .navbar ul li a {
   font-size: 18px;
   font-family: "Roboto", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -58,18 +55,26 @@ main {
 section {
   margin-top: 10px;
   display: inline-block;
-  /**width: 50%;**/
   vertical-align: top;
   padding: 20px;
 }
 
-/* Estilos para versión de escritorio */
+.carousel-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.carousel-inner img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+}
+
 @media (min-width: 768px) {
   .row {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
   .footertext {
@@ -79,49 +84,35 @@ section {
     width: 100%;
   }
 }
-
-/* Estilos para versión móvil */
 @media (max-width: 900px) {
   .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .col.md-6 {
     width: 100%;
   }
   .col.md-6:last-child {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
+  }
+  .col.md-6 img {
+    width: 100%;
+    height: auto;
   }
   .toggle-buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 10px;
   }
   .footertext {
     padding: 10px;
   }
+  .mockupflat {
+    width: 100%;
+  }
+  section {
+    width: 100%;
+  }
 }
-
-/**section + section {
-    border-top: 1px solid rgb(85, 81, 81);
-    margin-top: 20px;
-}**/
-/**aside {
-    position: absolute;
-    top: 15px;
-    right: 0;
-    width: 50%;
-    text-align: center;
-}**/
 #mockup {
   max-width: 100%;
   height: auto;
@@ -157,78 +148,66 @@ h2 {
 }
 
 #iniciasesion {
-  padding: 5px 5px 5px 5px;
-  border-style: 3px solid;
+  padding: 5px;
+  border-style: solid;
+  border-width: 3px;
   border-color: #1976D2;
 }
 
 #Registrar {
-  padding: 5px 5px 5px 5px;
-  border-style: 3px solid;
+  padding: 5px;
+  border-style: solid;
+  border-width: 3px;
   border-color: #009688;
 }
 
 #Limpiar {
-  padding: 5px 5px 5px 5px;
-  border-style: 3px solid;
+  padding: 5px;
+  border-style: solid;
+  border-width: 3px;
   border-color: #b00020;
 }
 
 #Comentar {
-  padding: 5px 5px 5px 5px;
-  border-style: 3px solid;
+  padding: 5px;
+  border-style: solid;
+  border-width: 3px;
   border-color: #009688;
 }
 
 p {
-  padding: 5PX 5PX 5PX 5PX;
+  padding: 5px;
 }
 
 label {
-  padding: 5PX 5PX 5PX 5PX;
+  padding: 5px;
 }
 
 input {
-  margin: 5PX 5PX 5PX;
-  border-color: gray;
+  margin: 5px;
+  border-color: rgb(128, 128, 128);
   border-radius: 5px;
 }
 
 footer {
   margin-top: 180px;
   padding-left: 24px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#3a968d), to(#BBDEFB));
   background: linear-gradient(to top, #3a968d, #BBDEFB);
 }
 
 .icons {
   width: 24px;
   height: 24px;
-  margin: 24px 8px 24px 8px;
+  margin: 24px 8px;
 }
 
 #mockup {
   max-width: 100%;
   height: auto;
-  -webkit-animation: Anima;
-          animation: Anima;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-}
-
-@-webkit-keyframes Anima {
-  from {
-    opacity: 0;
-    margin-left: 10%;
-  }
-  to {
-    opacity: 1;
-    margin-left: 0%;
-  }
+  animation: Anima;
+  animation-duration: 0.5s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in;
 }
 
 @keyframes Anima {
@@ -241,38 +220,18 @@ footer {
     margin-left: 0%;
   }
 }
-
 .izq {
-  -webkit-animation: Anima;
-          animation: Anima;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
+  animation: Anima;
+  animation-duration: 1s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in;
 }
 
 .der {
-  -webkit-animation: Anima2;
-          animation: Anima2;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-}
-
-@-webkit-keyframes Anima2 {
-  from {
-    opacity: 0;
-    margin-right: 30%;
-  }
-  to {
-    opacity: 1;
-    margin-right: 0%;
-  }
+  animation: Anima2;
+  animation-duration: 1s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in;
 }
 
 @keyframes Anima2 {
@@ -285,27 +244,11 @@ footer {
     margin-right: 0%;
   }
 }
-
 #up {
-  -webkit-animation: Anima3;
-          animation: Anima3;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-}
-
-@-webkit-keyframes Anima3 {
-  from {
-    opacity: 0;
-    margin-bottom: 30%;
-  }
-  to {
-    opacity: 1;
-    margin-bottom: 0%;
-  }
+  animation: Anima3;
+  animation-duration: 0.5s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in;
 }
 
 @keyframes Anima3 {
@@ -318,7 +261,6 @@ footer {
     margin-bottom: 0%;
   }
 }
-
 .footertext {
   padding: 20px;
   color: #000;
@@ -330,29 +272,24 @@ footer {
 }
 
 .footertext:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#3a968d), to(#BBDEFB));
   background: linear-gradient(to top, #3a968d, #BBDEFB);
 }
 
 .card-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
 .card {
   width: 100%;
-  max-width: 70%;
-  margin-bottom: 20px;
+  margin: 0 auto;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card-body {
@@ -369,12 +306,8 @@ footer {
 }
 
 .toggle-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -410,5 +343,4 @@ a:hover {
 .navbar-nav .nav-link:hover {
   background-color: #3aa58e;
   border-radius: 8px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
